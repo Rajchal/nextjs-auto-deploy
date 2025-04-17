@@ -22,4 +22,8 @@ cd nextjs_app
 npm install --legacy-peer-deps
 npm audit fix --force
 npm run build --no-lint
-npm start
+sudo npm install -g pm2
+pm2 start npm --name "nextjs" -- start
+pm2 startup
+pm2 save
+
